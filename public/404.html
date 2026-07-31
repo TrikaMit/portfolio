@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // SPA redirect: GitHub Pages serves 404.html for unknown routes.
+      // This redirects back to index.html with the path encoded as a query param,
+      // which index.html then restores via history.replaceState.
+      const path = window.location.pathname
+      window.location.replace('/?redirect=' + encodeURIComponent(path))
+    </script>
+  </head>
+</html>
